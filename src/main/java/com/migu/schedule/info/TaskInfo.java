@@ -10,6 +10,12 @@ public class TaskInfo
 {
     private int taskId;
     private int nodeId;
+
+    public TaskInfo (int taskId, int nodeId) {
+        this.taskId = taskId;
+        this.nodeId = nodeId;
+    }
+
     public int getNodeId()
     {
         return nodeId;
