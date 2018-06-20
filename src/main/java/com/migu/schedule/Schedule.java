@@ -112,11 +112,11 @@ public class Schedule {
             int index = findMinIndex(tempNode);
             for(int i = 0;i< tempNode.length;i++) {
                 if (tempNode[i] + task.getConsumption() < threshold) {
-                    tempNode[i] += task.getConsumption();
                     index = i;
                     break;
                 }
             }
+            tempNode[index] += task.getConsumption();
             taskInfos.add(new TaskInfo(task.getTaskId(),index));
         }
         if (flag(tempNode,threshold)) {
